@@ -9,3 +9,6 @@ As it contains some of the closest galaxies, the Local Group allows for detailed
  The Local Group is relatively isolated from other galaxy groups. 
  The Local Group's peculiar velocity (motion relative to the cosmic microwave background) keeps it somewhat isolated as it moves relative to this general expansion.
  
+The goal of this project is to quantify the relationship between the barycenter velocity vector, the relative position vector that points from the MW towards M31 and the relative velocity vector of M31 with respect to the MW.
+
+We aim at making a comparison between the values observed for our LG and simulated LGs in large N-body cosmological simulations in the LCDM framework. The question that drives our comparison is, to what extend the observed kinematic configurations are similar to the expected values from LCDM simulations.
