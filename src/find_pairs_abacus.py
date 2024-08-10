@@ -67,7 +67,6 @@ def compute_pairs_FOF_abacus_box(phaseID=0, vcirc_threshold=200.0, exclusion_fac
     halo_A_id = np.array([pair[0] for pair in isolated_pairs], dtype=int)
     halo_B_id = np.array([pair[1] for pair in isolated_pairs], dtype=int)
 
-    print(isolated_pairs)
     filename = f"../data/pairs_AbacusSummit_base_c000_ph{phaseID:03d}_z0.100.hdf5"
     print(f"Started writing data to {filename}")
     
