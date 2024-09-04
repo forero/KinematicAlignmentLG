@@ -4,9 +4,9 @@ import h5py
 from abacusnbody.data.compaso_halo_catalog import CompaSOHaloCatalog
 import os
 
-def compute_pairs_FOF_abacus_box(phaseID=0, vcirc_threshold=200.0, vcirc_upper_limit=300.0, exclusion_factor=3.0):
+def compute_pairs_FOF_abacus_box(cosmoID=0, phaseID=0, vcirc_threshold=200.0, vcirc_upper_limit=300.0, exclusion_factor=3.0):
     # Define the path to the halo catalog
-    basePath = f"/global/cfs/cdirs/desi/cosmosim/Abacus/AbacusSummit_base_c000_ph{phaseID:03d}/halos/z0.100/"
+    basePath = f"/global/cfs/cdirs/desi/cosmosim/Abacus/AbacusSummit_base_c{cosmoID:03d}_ph{phaseID:03d}/halos/z0.100/"
     fields = ["id", "N", "x_L2com", "v_L2com", "vcirc_max_L2com"]
     
     print("Started reading the data")
@@ -77,7 +77,7 @@ def compute_pairs_FOF_abacus_box(phaseID=0, vcirc_threshold=200.0, vcirc_upper_l
     halo_A_id = np.array([pair[0] for pair in final_pairs], dtype=int)
     halo_B_id = np.array([pair[1] for pair in final_pairs], dtype=int)
 
-    filename = f"../data/pairs_AbacusSummit_base_c000_ph{phaseID:03d}_z0.100.hdf5"
+    filename = f"../data/pairs_AbacusSummit_base_c{cosmoID:03d}_ph{phaseID:03d}_z0.100.hdf5"
     print(f"Started writing data to {filename}")
     
     with h5py.File(filename, 'w') as h5f:
@@ -95,4 +95,4 @@ def compute_pairs_FOF_abacus_box(phaseID=0, vcirc_threshold=200.0, vcirc_upper_l
     print("Finished writing data")
 
 if __name__ == "__main__":
-    compute_pairs_FOF_abacus_box()
+    compute_pairs_FOF_abacus_box(cosmoID=1)
