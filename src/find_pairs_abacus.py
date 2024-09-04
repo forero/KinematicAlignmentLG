@@ -95,4 +95,13 @@ def compute_pairs_FOF_abacus_box(cosmoID=0, phaseID=0, vcirc_threshold=200.0, vc
     print("Finished writing data")
 
 if __name__ == "__main__":
-    compute_pairs_FOF_abacus_box(cosmoID=1)
+    abacus_simulations = [
+    2, 3, 4, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+    100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113,
+    114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 130,
+    131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144,
+    145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158,
+    159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172,
+    173, 174, 175, 176, 177, 178, 179, 180]
+    for cosmoID in abacus_simulations:
+        compute_pairs_FOF_abacus_box(cosmoID=cosmoID)
